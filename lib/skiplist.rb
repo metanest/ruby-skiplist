@@ -35,7 +35,7 @@ THE SOFTWARE.
 #= Lock-Free Skip List
 #
 #Authors::   KISHIMOTO, Makoto
-#Version::   0.0.1 2010-Aug-13
+#Version::   0.0.2 2010-Aug-13
 #Copyright:: Copyright (c) 2010 KISHIMOTO, Makoto
 #License::   (other than loop.rb ) X License
 #
@@ -44,7 +44,7 @@ THE SOFTWARE.
 #- The Art of Multiprocessor Programming, Chap. 14
 #
 class SkipList
-	VERSION = '0.0.1'
+	VERSION = '0.0.2'
 
 	#
 	# Node of SkipList, inner use only
@@ -145,7 +145,13 @@ class SkipList
 	# Returns <code>true</code> if <i>lst</i> contains no elements.
 	#
 	def empty?
-		@head[0].get_link.equal? @tail
+		p = @head[0].get_link
+		pp, m = p[0].get
+		while m do
+			p = pp
+			pp, m = p[0].get
+		end
+		p.equal? @tail
 	end
 
 	#
