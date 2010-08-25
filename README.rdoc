@@ -2,6 +2,10 @@
 
 * http://github.com/metanest/ruby-skiplist
 
+== NOTE:
+
+This version depends GCC (builtin __sync_bool_compare_and_swap). Patch welcome.
+
 == DESCRIPTION:
 
 Lock-free skip list implementation by ruby.
