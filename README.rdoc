@@ -4,7 +4,7 @@
 
 == NOTE:
 
-This version depends GCC (builtin __sync_bool_compare_and_swap). Patch welcome.
+This version depends GCC (builtin __sync_bool_compare_and_swap). Patches are welcome.
 
 == DESCRIPTION:
 
